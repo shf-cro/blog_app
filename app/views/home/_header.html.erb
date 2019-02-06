@@ -1,11 +1,11 @@
 <header>
-  <div class='menu'>
+  <div class='navimenu'>
     <span class='toggle'>
       <i></i>
       <i></i>
       <i></i>
     </span>
-    <div class='menuContent'>
+    <div class='navimenuContent'>
       <ul>
         <li>
           <%= link_to "Home", root_path %>
@@ -16,6 +16,18 @@
         <li>
           <%= link_to "Book", book_path %>
         </li>
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to 'プロフィール変更', edit_user_registration_path %>
+          </li>
+          <li>
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+          </li>
+        <% end %>
+        <li>
+          <%= link_to 'お問い合わせ', inquiry_path %>
+        </li>
+
       </ul>
     </div>
   </div>

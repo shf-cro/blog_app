@@ -1,21 +1,11 @@
 <style>
 .bg_1 {
-  background-image: url(/images/top/mig.jpeg);
-  background-size: cover;
-  text-align: center;
-}
-.bg_2 {
-  background-image: url(/images/top/sea.jpg);
-  background-size: cover;
-  text-align: center;
-}
-.bg_3 {
-  background-image: url(/images/top/images.jpeg);
+  background-image: url(/images/top/top.png);
   background-size: cover;
   text-align: center;
 }
 .bg_4 {
-  background-image: url(/images/top/technology.png);
+  background-image: url(/images/top/app.png);
   background-size: cover;
   text-align: center;
 }
@@ -23,27 +13,120 @@
   background-image: url(/images/top/book.png);
   background-size: cover;
   text-align: center;
-}
+
 </style>
 <div class="">
   <main id="fullpage">
-    <div class="section">
-      <div class="slide bg_1">
-        <h1>ふるしーのmemo</h1>
-        <p>スライド１まい目の内容</p>
-      </div>
-      <div class="slide bg_2">
-        <p>スライド２枚目の内容</p>
-      </div>
-      <div class="slide bg_3">
-        <p>スライド３枚目の内容</p>
+    
+    <!--トップページ-->
+    <div class="section bg_1">
+      <div class="slide top">
+        <div class = "title">
+          shfのmemo
+        </div>
+
+        <div class = "top-contents">
+          <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-2">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <%= link_to detail_path(@new) do %>
+                    <p><img src="images/top/topic.png" width="100"/></p>
+                  <% end %>
+                </div>
+                <div class="panel-footer">
+                  <%= link_to detail_path(@new) do %>
+                    <small>【New topic】新着記事</small>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-2">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <%= link_to('/shf') do %>
+                    <p><img src="images/top/info.png" width="100"/></p>
+                  <% end %>
+                </div>
+                <div class="panel-footer">
+                  <%= link_to('/shf') do %>
+                    <small>【ふるしーってだれ？】<br>運営者へのお問い合わせ</small>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    
+    <!--アプリ画面 -->
     <div class="section bg_4">
-      <%= link_to "For more Tech Infomation", technology_path ,class: "btn" %>
+      <div class = "title">
+        App
+      </div>
+      <div class = "tech-contents">
+        <div class="row">
+          <div class="col-md-3">
+          </div>
+
+          <% @techs.each do |content| %>
+            <div class="col-md-2">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <%= link_to image_tag(content.image1.url, { :border => '0'}), detail_path(content.id) %>
+                </div>
+                <div class="panel-footer">
+                  <small><%= content.title %></small>
+                </div>
+              </div>
+            </div>
+          <% end %>
+          
+          <div class="col-md-3">
+          </div>
+
+        </div>
+      </div>
+      
+      <%= link_to "For more Technology Infomation", technology_path ,class: "square_btn" %>
     </div>
+    
+    <!--本画面-->
     <div class="section bg_5">
-      <%= link_to "For more Book Infomation", book_path ,class: "btn"%>
+      <div class = "title">
+        Book
+      </div>
+
+      <div class = "book-contents">
+        <div class="row">
+          <div class="col-md-3">
+          </div>
+
+          <% @books.each do |content| %>
+            <div class="col-md-2">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <%= link_to image_tag(content.image1.url, { :border => '0'}), detail_path(content.id) %>
+                </div>
+                <div class="panel-footer">
+                  <small><%= content.title %></small>
+                </div>
+              </div>
+            </div>
+          <% end %>
+          
+          <div class="col-md-3">
+          </div>
+        </div>
+      <%= link_to "For more Book Infomation", book_path ,class: "square_btn" %>
+
+      </div>
     </div>
   </main>
 </div>

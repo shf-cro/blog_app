@@ -1,6 +1,15 @@
 <%= render 'header' %>
-<div class="masonry">
-	<div class="grid">News<img src="images/technology/News Picks.png" width="300"/>【レビュー】アイウエオかきくけさしすせそ</div>
-	<div class="grid">News<img src="images/technology/Nikkei.png" width="300"/>【レビュー】アイウエオかきくけさしすせそ</div>
-	<div class="grid">検索アプリ<img src="images/technology/Smooz.png" width="300"/>【レビュー】アイウエオかきくけさしすせそ</div>
-</div>
+	<div class="masonry">
+		<% @techs.each do |content| %>
+			<div class="grid">
+				<div class="panel panel-default">
+	        <div class="panel-body">
+	          <%= link_to image_tag(content.image1.url, { :border => '0'}), detail_path(content.id) %>
+	        </div>
+	        <div class="panel-footer">
+	          <small><%= content.title %></small>
+	        </div>
+	      </div>
+			</div>	
+		<% end %>
+	</div>

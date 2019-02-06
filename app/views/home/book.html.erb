@@ -1,12 +1,17 @@
 <%= render 'header' %>
 <div class="masonry">
-	<div class="grid">
-	  <a href="detail.html">
-  	  お金の本
-  	  <img src="images/book/okane.png" width="300"/>
-  	  【レビュー】アイウエオかきくけさしすせそ
-	  </a>
+	<div class = "row">
+		<% @books.each do |content| %>
+			<div class="grid">
+				<div class="panel panel-default">
+	        <div class="panel-body">
+	          <%= link_to image_tag(content.image1.url, { :border => '0'}), detail_path(content.id) %>
+	        </div>
+	        <div class="panel-footer">
+	          <small><%= content.title %></small>
+	        </div>
+	      </div>
+			</div>	
+		<% end %>
 	</div>
-	<div class="grid">未来の年表<img src="images/book/future.png" width="300"/>【レビュー】アイウエオかきくけさしすせそ</div>
-	<div class="grid">下町ロケット<img src="images/book/shitamachi.png" width="300"/>【レビュー】アイウエオかきくけさしすせそ</div>
 </div>

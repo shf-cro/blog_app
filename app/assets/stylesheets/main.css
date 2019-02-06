@@ -1,11 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700);
 body {
-  background-color: #4a585f;
+  /*background-image: url("/images/top/detail.png");*/
+  /*background-size: cover;*/
   font-family: 'Fira Sans', sans-serif;
   font-size: 13px;
 }
 
-.menu {
+.navimenu {
   height: 70px;
   width: 70px;
   right: 70px;
@@ -17,28 +18,28 @@ body {
   transition: all .2s ease;
   z-index: 999;
 }
-.menu.active {
+.navimenu.active {
   width: calc(100% - 140px);
 }
-.menu.active .menuContent * {
+.navimenu.active .navimenuContent * {
   opacity: 1;
 }
-.menu.active span i:nth-child(1) {
+.navimenu.active span i:nth-child(1) {
   -webkit-transform: rotate(-45deg) translate(-50%, -50%);
           transform: rotate(-45deg) translate(-50%, -50%);
   top: 50%;
 }
-.menu.active span i:nth-child(2) {
+.navimenu.active span i:nth-child(2) {
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
   opacity: 0;
 }
-.menu.active span i:nth-child(3) {
+.navimenu.active span i:nth-child(3) {
   -webkit-transform: rotate(45deg) translate(-50%, -50%);
           transform: rotate(45deg) translate(-50%, -50%);
   top: 50%;
 }
-.menu span {
+.navimenu span {
   width: 70px;
   height: 70px;
   position: absolute;
@@ -47,7 +48,7 @@ body {
   background: #fff;
   z-index: 1;
 }
-.menu span i {
+.navimenu span i {
   position: absolute;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
@@ -61,16 +62,16 @@ body {
   transition: transform .3s ease, opacity .1s ease .1s;
   transition: transform .3s ease, opacity .1s ease .1s, -webkit-transform .3s ease;
 }
-.menu span i:nth-child(1) {
+.navimenu span i:nth-child(1) {
   top: 40%;
 }
-.menu span i:nth-child(2) {
+.navimenu span i:nth-child(2) {
   top: 50%;
 }
-.menu span i:nth-child(3) {
+.navimenu span i:nth-child(3) {
   top: 60%;
 }
-.menu .menuContent {
+.navimenu .navimenuContent {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -78,10 +79,10 @@ body {
   right: 0px;
   text-align: center;
 }
-.menu .menuContent * {
+.navimenu .navimenuContent * {
   opacity: 0;
 }
-.menu .menuContent ul li {
+.navimenu .navimenuContent ul li {
   display: inline-block;
   margin-left: 50px;
   margin-right: 50px;
@@ -89,18 +90,19 @@ body {
   transition: opacity .3s ease .3s;
   cursor: pointer;
   position: relative;
+  margin-top: 20px;
 }
-.menu .menuContent ul li:hover:before {
+.navimenu .navimenuContent ul li:hover:before {
   opacity: .8;
   top: 13px;
   left: 20px;
 }
-.menu .menuContent ul li:hover:after {
+.navimenu .navimenuContent ul li:hover:after {
   opacity: .8;
   bottom: 13px;
   left: -20px;
 }
-.menu .menuContent ul li:before, .menu .menuContent ul li:after {
+.navimenu .navimenuContent ul li:before, .navimenu .navimenuContent ul li:after {
   content: "";
   position: absolute;
   width: 20px;
@@ -108,7 +110,7 @@ body {
   background: #cccccc;
   transition: all .3s ease;
 }
-.menu .menuContent ul li:before {
+.navimenu .navimenuContent ul li:before {
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
   left: 60px;
@@ -117,7 +119,7 @@ body {
   right: 0;
   margin: auto;
 }
-.menu .menuContent ul li:after {
+.navimenu .navimenuContent ul li:after {
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
   left: -60px;
@@ -167,7 +169,7 @@ margin:20px;
 padding:14px;
 float:left;
 background:#424242;
-color:#fff;
+color: black;
 display:inline;
 }
 #wrapper {
@@ -180,24 +182,55 @@ display:inline;
   margin: 0 auto;   /*中央寄せ*/
   position: relative;
 }
-.btn{
+
+.square_btn{
+    position: relative;
     display: inline-block;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    font-size: 200%;
     text-decoration: none;
-    background: #87befd;
-    color: #FFF;
-    width: 120px;
-    height: 120px;
-    line-height: 120px;
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
-    overflow: hidden;
-    box-shadow: 0px 0px 0px 5px #87befd;
-    border: dashed 1px #FFF;
+    color: #00BCD4;
+    background: #ECECEC;
     transition: .4s;
+  }
+.square_btn:hover {
+    background: #00bcd4;
+    color: white;
+}
+.masonry{
+  margin: 100px;
 }
 
-.btn:hover{
-    background: #668ad8;
-     box-shadow: 0px 0px 0px 5px #668ad8;
+.detail_contents{
+  height: 100vh;
+  padding-top: 150px;
+  padding-left: 100px;
+}
+
+/*administrator*/
+.admini{
+  padding-top: 100px; 
+}
+
+.shf_title {
+  font-weight: bold;
+  color: blue;
+  text-align: center;
+  margin: auto;
+}
+
+.shf_photo {
+  padding: 100px 30px;
+  float: right;
+}
+
+.admini_body {
+  padding-top: 15px;
+}
+
+.title {
+  padding-bottom: 50px;
+  font-size: 30px;
+  font-weight: bold;
 }
