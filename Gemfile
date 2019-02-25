@@ -74,3 +74,5 @@ gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
 
 gem 'dotenv-rails'
+
+gem 'fog-aws'
