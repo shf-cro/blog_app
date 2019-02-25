@@ -1,21 +1,20 @@
 <header>
-  <div class='navimenu'>
-    <span class='toggle'>
-      <i></i>
-      <i></i>
-      <i></i>
-    </span>
-    <div class='navimenuContent'>
-      <ul>
-        <li>
-          <%= link_to "Home", root_path %>
-        </li>
-        <li>
-          <%= link_to "Technology", technology_path %>
-        </li>
-        <li>
-          <%= link_to "Book", book_path %>
-        </li>
+  <div class="nav">
+   <ul>
+    
+    <li>
+        <%= link_to "Home", root_path %>
+      </li>
+      
+    <li>
+        <%= link_to "Technology", technology_path %>
+      </li>
+    
+    <li>
+        <%= link_to "Book", book_path %>
+      </li>
+    
+    <li>
         <% if user_signed_in? %>
           <li>
             <%= link_to 'プロフィール変更', edit_user_registration_path %>
@@ -24,11 +23,12 @@
             <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
           </li>
         <% end %>
-        <li>
-          <%= link_to 'お問い合わせ', inquiry_path %>
-        </li>
+      </li>
+    
+    <li>
+        <%= link_to 'お問い合わせ', inquiry_path %>
+      </li>
 
-      </ul>
-    </div>
+   </ul>
   </div>
 </header>

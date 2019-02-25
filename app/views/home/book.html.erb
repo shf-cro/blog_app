@@ -1,17 +1,15 @@
 <%= render 'header' %>
 <div class="masonry">
-	<div class = "row">
-		<% @books.each do |content| %>
-			<div class="grid">
-				<div class="panel panel-default">
-	        <div class="panel-body">
-	          <%= link_to image_tag(content.image1.url, { :border => '0'}), detail_path(content.id) %>
-	        </div>
-	        <div class="panel-footer">
-	          <small><%= content.title %></small>
-	        </div>
-	      </div>
-			</div>	
-		<% end %>
-	</div>
+	<% @books.each do |content| %>
+		<div class="grid">
+			<div class="panel panel-default">
+        <div class="panel-body">
+          <%= link_to image_tag(content.image1.url, { :border => '0'}), detail_path(content.id) %>
+        </div>
+        <div class="panel-footer">
+          <small><%= content.title %></small>
+        </div>
+      </div>
+		</div>	
+	<% end %>
 </div>

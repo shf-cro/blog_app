@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700);
+body {
+  background-image: url("/images/top/detail_back.png");
+  background-size: cover;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 13px;
+}
+
+ul{
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+  text-align: center;
+}
+
+ul li{
+
+  display: table-cell;
+  min-width: 50px;
+  float: left;
+}
+
+ul li a{
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+}
+ul li.current{
+  background-color: #DEEBF7;
+}
+ul li.current a{
+  color: #555;
+}
+ul li:hover{
+  background-color: #FFF2CC;
+}
+
+header{
+  padding: 10px 20px 20px 200px;
+  text-align: center;
+}
+
+header li{
+  padding: 10px 50px;
+  font-size: 20px;
+}
+
+.sectionHeroImg {
+  width: 100%;
+  height: 100vh;
+  background-image: url(http://artplague.dk/_assets/JWSB3QDJEW.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.sectionHeroImg h1 {
+  font-weight: 700;
+  font-size: 4vw;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.sectionHeroImg h1 span {
+  font-weight: 300;
+}
+.sectionHeroImg h1 span p {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+/*Masony*/
+#masonry {  
+  width:100%;
+  padding:10px;
+  border:1px solid #EEE; 
+  overflow:auto; 
+}  
+
+.grid {
+  width:330px;
+  margin:20px, 10px;
+  padding:14px;
+  float:left;
+  color: black;
+  display:inline;
+  text-align: center;
+  
+}
+#wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;   /*全体の中央寄せ*/
+}
+#container {
+  width: 100%;
+  margin: 0 auto;   /*中央寄せ*/
+  position: relative;
+}
+
+.square_btn{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    font-size: 200%;
+    text-decoration: none;
+    color: #00BCD4;
+    background: #ECECEC;
+    transition: .4s;
+  }
+.square_btn:hover {
+    background: #00bcd4;
+    color: white;
+}
+.masonry{
+  margin: 10px 10px 10px 150px;
+}
+
+/*administrator*/
+.admini{
+  padding-top: 100px; 
+}
+
+.shf_title {
+  font-weight: bold;
+  color: blue;
+  text-align: center;
+  margin: auto;
+}
+
+.shf_photo {
+  padding: 100px 30px;
+  float: right;
+}
+
+.admini_body {
+  padding-top: 15px;
+}
+
+.title {
+  padding-bottom: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.center{
+  text-align: center;
+}
+
+.img_top{
+  width: 10vw;
+}
+
+.row_detail{
+  background-color: white;
+}
+
+// .row_det{
+//   background-color: white;
+// }
