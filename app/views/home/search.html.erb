@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<%= render 'header' %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contents.each do |content| %>
+      <tr>
+        <td>
+          <%= link_to content.title, detail_path(content.id) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

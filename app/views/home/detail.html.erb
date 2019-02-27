@@ -1,14 +1,20 @@
 <div class = "detail_contents">
   <%= render 'header' %>
   <div class="row_detail">
-      <h2><%= @content.title %></h2>
-      <div class="col-md-3 col-md-offset-3" class = "center">
-        <p>
-          <%= @content.body.html_safe %>
-        </p>
-      </div>
-      <div class="col-md-6">
-        <%= image_tag(@content.image1.url, { :border => '0'}) %>
-      </div>
+    <div class="col-md-6 col-md-offset-3 row_detail center">
+      <p class="h3"><%= @content.title %></p>
+    </div>
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-3 col-md-offset-3 row_detail center" style="height:500px;">
+      <p>
+        <%= @content.body.html_safe %>
+      </p>
+    </div>
+    <div class="col-md-3 row_detail center" style="height:500px;">
+      <%= image_tag(@content.image1.url, { :border => '0'}) %>
+    </div>
+    <div class="col-md-3">
+    </div>
   </div>
 </div>

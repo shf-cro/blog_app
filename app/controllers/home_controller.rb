@@ -15,4 +15,7 @@ class HomeController < ApplicationController
   end
   def administrator
   end
+  def search
+    @contents = Content.search(params[:qkeyword])
+  end
 end

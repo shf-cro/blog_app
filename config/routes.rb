@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/technology' ,to: 'home#technology'
   get '/detail/:id' ,to: 'home#detail' , as: 'detail'
   get '/shf' ,to: 'home#administrator'
+  post '/search' ,to: 'home#search'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

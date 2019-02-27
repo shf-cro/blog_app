@@ -14,20 +14,24 @@
         <%= link_to "Book", book_path %>
       </li>
     
-    <li>
-        <% if user_signed_in? %>
-          <li>
-            <%= link_to 'プロフィール変更', edit_user_registration_path %>
-          </li>
-          <li>
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-          </li>
-        <% end %>
+    <% if user_signed_in? %>
+      <li>
+        <%= link_to 'プロフィール変更', edit_user_registration_path %>
       </li>
-    
+      <li>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+      </li>
+    <% end %>
+
     <li>
         <%= link_to 'お問い合わせ', inquiry_path %>
-      </li>
+    </li>
+    <li>
+      <%= form_tag search_path, method: :post do %>
+        <%= text_field_tag  :qkeyword %>
+        <%= submit_tag '検索' %>
+      <% end %>
+    </li>
 
    </ul>
   </div>
